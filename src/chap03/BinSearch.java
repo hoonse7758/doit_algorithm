@@ -17,9 +17,9 @@ public class BinSearch {
         return count;
     }
 
-    static int binSearchX(int[] arr, int n, int key) {
+    static int binSearchX(int[] arr, int key) {
         int pl = 0;
-        int pr = n - 1;
+        int pr = arr.length - 1;
         int pc;
 
         do {
@@ -112,7 +112,7 @@ public class BinSearch {
         System.out.print("검색할 값 : "); int key = stdIn.nextInt();
 
         int idx = binSearch(x, num, key);
-        int idxX = binSearchX(x, num, key);
+        int idxX = binSearchX(x, key);
         int[] idxs = new int[x.length];
         if (idx == -1) {
             System.out.println("\n그런 값은 없습니다.");
